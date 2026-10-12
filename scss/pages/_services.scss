@@ -1,0 +1,59 @@
+@use "../abstracts/" as *;
+// back to this code
+.services-section {
+  padding-top: $padding-block;
+  .cards {
+    .card {
+      @include screen(phone) {
+        flex-basis: 100%;
+      }
+
+      svg {
+        font-size: 40px;
+      }
+      span {
+        display: block;
+        font-size: 20px;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.section-information {
+  padding: $padding-block 10px 0px;
+  .container {
+    background: $color-linear;
+    border-radius: 20px;
+    @extend %flex-between;
+    text-align: center;
+    @include screen(tablet) {
+      flex-wrap: wrap;
+    }
+
+    .info {
+      padding: 50px;
+      @include screen(laptop) {
+        padding: 50px 30px;
+      }
+      @include screen(tablet) {
+        flex-basis: 47%;
+      }
+      @include screen(phone) {
+        flex-basis: 100%;
+      }
+    }
+    h3 {
+      font : {
+        size: 50px;
+        weight: bold;
+      }
+    }
+    span {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+  }
+}

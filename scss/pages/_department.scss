@@ -1,0 +1,59 @@
+@use "../abstracts/" as *;
+
+.department-section {
+  padding-top: $padding-block;
+  .cards {
+    .card {
+      &:hover .icon {
+        background-color: $color-off-white;
+        svg {
+          color: $color-primary-blue;
+        }
+      }
+      &:hover p {
+        color: $color-off-white;
+      }
+      .icon {
+        @extend %flex-center;
+        background-color: $color-primary-blue;
+        width: fit-content;
+        margin-inline: auto;
+        padding: 15px;
+        transition: 0.3s ease-out;
+        border-radius: 50%;
+        svg {
+          font-size: 22px;
+          color: $color-off-white;
+        }
+      }
+      span {
+        font : {
+          size: 22px;
+          weight: 600;
+        }
+        display: block;
+        margin-top: 15px;
+        transition: 0.3s ease-out;
+      }
+      p {
+        margin-top: 15px;
+        color: $color-gray-dark;
+        line-height: 1.7;
+        font-size: 14px;
+        transition: 0.3s ease-out;
+      }
+      .arrow {
+        padding: 15px 20px;
+        margin-top: 15px;
+        background-color: $color-primary-blue;
+        margin-inline: auto;
+        width: fit-content;
+        color: $color-off-white;
+        border: 2px solid $color-off-white;
+        border-radius: 6px;
+        @extend %flex-center;
+        cursor: pointer;
+      }
+    }
+  }
+}

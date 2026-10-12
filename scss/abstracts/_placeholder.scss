@@ -1,0 +1,23 @@
+@use "../abstracts/mixins" as *;
+
+%flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+%grid-system {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  @include screen(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include screen(phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

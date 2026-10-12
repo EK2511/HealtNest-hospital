@@ -1,0 +1,25 @@
+@use "../abstracts/" as *;
+.active {
+  color: $color-primary-blue !important;
+  &::before {
+    opacity: 1 !important;
+    visibility: visible !important;
+    bottom: -12px !important;
+  }
+}
+.search-active {
+  top: calc(100% + 45px) !important;
+  z-index: 100 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.active-bar {
+  max-height: 600px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.visible-menubar {
+  opacity: 1 !important;
+}

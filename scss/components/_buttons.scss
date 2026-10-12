@@ -1,0 +1,53 @@
+@use "../abstracts/" as *;
+
+.btn {
+  background-color: $color-primary-blue;
+  padding: 10px 16px;
+  color: $color-white;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  min-width: 110px;
+  border: 3px solid transparent;
+  font-weight: 500;
+  &:hover {
+    border-color: $color-primary-blue;
+    color: $color-primary-blue;
+    background-color: $color-off-white;
+  }
+  &-lg {
+    padding: 15px 22px;
+    border-radius: 4px;
+    font-size: 18px;
+  }
+}
+.btn-reverse {
+  @extend .btn-lg;
+  background-color: transparent;
+  border: 2px solid $color-primary-blue;
+  &:hover {
+    background-color: $color-primary-blue;
+    color: $color-white !important;
+  }
+}
+input[type="submit"] {
+  @extend .btn;
+  margin-top: 15px;
+  text-transform: capitalize;
+}
+
+.title {
+  @extend %flex-between;
+  @include screen(phone) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  button {
+    @extend %flex-center;
+    gap: 8px;
+  }
+}

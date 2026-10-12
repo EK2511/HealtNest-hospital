@@ -1,0 +1,73 @@
+@use "../abstracts/" as *;
+
+.home-section {
+  background-color: $color-blue-light;
+  .container {
+    @extend %flex-center;
+    align-items: stretch;
+    @include screen(laptop) {
+      flex-direction: column;
+    }
+    gap: 10px;
+    .textbox {
+      flex: 1;
+      padding-block: 100px;
+      max-width: 500px;
+      @include screen(laptop) {
+        align-self: center;
+        max-width: fit-content;
+        text-align: center;
+      }
+    }
+    span {
+      color: $color-gray-dark;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    h2 {
+      font-size: 70px;
+      margin-top: 6px;
+      @include screen(phone) {
+        font-size: 40px;
+      }
+    }
+    p {
+      color: $color-gray-dark;
+      margin-top: 10px;
+    }
+    .group-button {
+      margin-top: 30px;
+      @extend %flex-center;
+      justify-content: flex-start;
+      gap: 15px;
+      @include screen(laptop) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn-reverse {
+        @extend %flex-center;
+        gap: 10px;
+        color: $color-charcoal;
+        svg {
+          color: $color-primary-blue;
+          transition: 0.3s ease-in-out;
+        }
+        &:hover svg {
+          color: $color-white;
+        }
+      }
+    }
+  }
+  .image {
+    flex: 1;
+    width: 100%;
+    min-height: 540px;
+    transition: 0.3s ease-in-out;
+    background: {
+      image: url(../imgs/home1.jpg);
+      size: cover;
+      position: center;
+    }
+  }
+}

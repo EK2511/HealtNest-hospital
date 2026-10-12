@@ -1,0 +1,40 @@
+@use "../abstracts/" as *;
+
+.search-bar {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 55px);
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  background-color: $color-white;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 40px;
+  border: 2px solid rgba($color: $color-charcoal, $alpha: 0.5);
+  @include screen(tablet) {
+    display: none;
+  }
+  @extend %flex-between;
+  .select-items {
+    @extend %flex-center;
+    gap: 15px;
+  }
+  span {
+    font-weight: bold;
+  }
+  select {
+    background-color: $color-blue-tint;
+    padding: 15px;
+    border: none;
+    outline: none;
+    width: 180px;
+    option {
+      background-color: $color-blue-tint;
+    }
+  }
+  svg {
+    font-size: 20px;
+  }
+}

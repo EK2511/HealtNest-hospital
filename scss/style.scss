@@ -1,0 +1,30 @@
+@use "./abstracts/variables";
+@use "./abstracts/mixins";
+@use "./abstracts/placeholder";
+
+/* base files */
+@use "./base/reset";
+@use "./base/typography";
+@use "./base/utilities";
+
+/* components */
+@use "./components/buttons";
+@use "./components/cards";
+@use "./components/headbox";
+@use "./components/selectItem";
+
+/* layout */
+@use "./layout/header";
+@use "./layout/searchbar";
+@use "./layout/footer";
+
+/* pages */
+@use "./pages/home";
+@use "./pages/about";
+@use "./pages/services";
+@use "./pages/department";
+@use "./pages/specialist";
+@use "./pages/form";
+@use "./pages/blogs";
+@use "./pages/says";
+@use "./pages/packages";

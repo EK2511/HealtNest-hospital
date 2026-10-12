@@ -1,0 +1,26 @@
+@use "../abstracts/" as *;
+
+.head-box {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  padding-left: 12px;
+  color: $color-primary-blue;
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0px;
+    bottom: 4px;
+    background-color: $color-primary-blue;
+  }
+  + h3 {
+    font-size: 40px;
+    margin-top: 10px;
+    @include screen(tablet) {
+      font-size: 30px;
+    }
+  }
+}

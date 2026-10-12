@@ -1,0 +1,123 @@
+@use "../abstracts/" as *;
+
+footer {
+  background-color: $color-primary-blue;
+  color: $color-white;
+  .container {
+    padding-block: 60px;
+    @extend %flex-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    @include screen(phone) {
+      padding-block: 30px;
+    }
+
+    gap: 25px;
+    .box {
+      flex: 3;
+      @include screen(tablet) {
+        flex: 1;
+        flex-basis: 48%;
+      }
+      @include screen(phone) {
+        flex: 1;
+        flex-basis: 100%;
+        text-align: center;
+      }
+      h4 {
+        font-size: 27px;
+      }
+      @media (min-width: 993px) {
+        &:first-child {
+          flex: 4;
+        }
+      }
+      &:first-child p {
+        font-size: 14px;
+        margin-top: 20px;
+        max-width: 300px;
+        line-height: 1.8;
+        @include screen(phone) {
+          margin-inline: auto;
+        }
+      }
+      &:not(&:first-child) p {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      &:nth-child(2) {
+        justify-self: center;
+      }
+      &:nth-child(2) ul {
+        margin-left: 20px;
+        li {
+          margin-bottom: 15px;
+          font-size: 14px;
+          transition: 0.3s ease-in-out;
+
+          @include screen(phone) {
+            list-style: none;
+          }
+          a {
+            color: $color-white;
+            transition: 0.3s ease-in-out;
+          }
+          &:hover {
+            transform: translateX(6px);
+          }
+        }
+      }
+      &:nth-child(4) ul {
+        @extend %flex-center;
+        justify-content: flex-start;
+        gap: 10px;
+        @include screen(phone) {
+          justify-content: center;
+        }
+
+        li {
+          list-style: none;
+          padding: 8px;
+          @extend %flex-center;
+          background-color: $color-white;
+          color: $color-primary-blue;
+          border-radius: 50%;
+        }
+      }
+      &:nth-child(3) {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          @include screen(phone) {
+            align-items: center;
+          }
+
+          li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            svg {
+              padding: 8px;
+              @extend %flex-center;
+              background-color: $color-white;
+              color: $color-primary-blue;
+              font-size: 30px;
+              border-radius: 50%;
+            }
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    padding: 15px;
+    border-top: 2px solid $color-white;
+    text-align: center;
+  }
+}

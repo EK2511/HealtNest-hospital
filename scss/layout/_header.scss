@@ -1,0 +1,180 @@
+@use "../abstracts/" as *;
+header {
+  .contact {
+    padding: 10px;
+    background-color: $color-dark-black;
+    color: $color-white;
+    button {
+      padding: 6px 12px;
+    }
+  }
+  .container {
+    @extend %flex-between;
+    button {
+      @include screen(phone) {
+        flex: 1;
+      }
+    }
+  }
+  ul.contact-head ,
+  ul.menu-bar {
+    @extend %flex-center;
+    list-style: none;
+    gap: 15px;
+    @include screen(phone) {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 7px;
+      flex: 2;
+    }
+    li {
+      @extend %flex-center;
+      gap: 8px;
+    }
+    span {
+      font-size: 12px;
+      @include screen(phone) {
+        font-size: 11px;
+      }
+    }
+    svg {
+      width: 25px;
+      height: 25px;
+      padding: 5px;
+      font-size: 22px;
+      color: $color-primary-blue;
+      background-color: $color-light-gray;
+      border-radius: 50%;
+    }
+  }
+  .main-header {
+    padding: 25px 10px;
+    background-color: $color-white;
+    @extend %flex-between;
+    @include screen(tablet) {
+      padding: 15px;
+    }
+
+    .container {
+      @include screen(tablet) {
+        flex-direction: column;
+      }
+      .content {
+        background-color: $color-white;
+        z-index: 1000;
+        @include screen(tablet) {
+          @include flex-between;
+          width: 100%;
+        }
+        svg {
+          cursor: pointer;
+          display: none;
+          @include screen(tablet) {
+            display: block;
+          }
+        }
+        > a {
+          font-size: 35px;
+          font-style: italic;
+          font-weight: 800;
+          span {
+            color: $color-primary-blue;
+            margin-left: -6px;
+            span {
+              color: $color-black;
+            }
+          }
+        }
+      }
+    }
+    nav {
+      @extend %flex-center;
+      gap: 25px;
+      position: relative;
+      transition: 0.3s ease-out;
+
+      @include screen(tablet) {
+        width: 100%;
+        gap: 0px;
+        max-height: 0;
+        opacity: 0;
+        visibility: hidden;
+        overflow: hidden;
+      }
+
+      > svg {
+        font-size: 25px;
+        display: none;
+        @include screen(tablet) {
+          display: block;
+        }
+      }
+      .menu-bar {
+        gap: 25px;
+        @include screen(tablet) {
+          padding: 15px 0px 8px;
+          align-items: stretch;
+          flex-direction: column;
+          width: 100%;
+          opacity: 0;
+          transition: 0.3s ease-in-out;
+        }
+        li {
+          font-size: 18px;
+          font-weight: bold;
+          a {
+            color: $color-black;
+            transition: 0.3s ease;
+            position: relative;
+            @include screen(tablet) {
+              width: 100%;
+              padding: 5px;
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: 65%;
+              height: 4px;
+              background-color: $color-primary-blue;
+              left: 50%;
+              bottom: -18px;
+              transform: translateX(-50%);
+              border-radius: 6px;
+              opacity: 0;
+              visibility: hidden;
+              transition: 0.3s ease;
+              @include screen(tablet) {
+                left: 0;
+                transform: translateX(0);
+                width: 100%;
+              }
+            }
+            &:hover {
+              color: $color-primary-blue;
+              &::before {
+                opacity: 1;
+                visibility: visible;
+                bottom: -12px;
+              }
+            }
+          }
+        }
+      }
+      .search svg {
+        @extend %flex-center;
+        font-size: 20px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        @include screen(tablet) {
+          display: none;
+        }
+        &:hover {
+          color: $color-primary-blue;
+          transform: scale(1.3);
+        }
+      }
+    }
+  }
+}

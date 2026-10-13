@@ -24,6 +24,9 @@
         flex-direction: column;
         padding: 30px;
         position: relative;
+        @include screen(phone) {
+          padding-block: 0;
+        }
         &::before {
           content: attr(data-cat);
           position: absolute;

@@ -14,21 +14,6 @@ bar.onclick = function () {
   menuBar.classList.toggle("visible-menubar");
 };
 
-const links = document.querySelectorAll("nav ul li a");
-
-links.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    removeActive();
-    e.currentTarget.classList.add("active");
-  });
-});
-
-function removeActive() {
-  links.forEach((link) => {
-    link.classList.remove("active");
-  });
-}
-
 const homeImage = document.querySelector(".home-section .image");
 const photoUrl = ["home1.jpg", "home2.jpg", "home3.jpg"];
 let currentIndex = 0;
@@ -36,7 +21,7 @@ let currentIndex = 0;
 setInterval(() => {
   currentIndex = (currentIndex + 1) % photoUrl.length;
   homeImage.style.backgroundImage = `url(imgs/${photoUrl[currentIndex]})`;
-}, 6000);
+}, 5000);
 
 const experienceYear = document.getElementById("year");
 const patientLevel = document.getElementById("level");
@@ -55,10 +40,25 @@ function counter(element, target, time, sign = "+", increase = 1) {
   }, time);
 }
 
-counter(experienceYear, 25, 140);
-counter(patientLevel, 95, 35, "%");
-counter(patientServed, 7000, 50, "+", 100);
-counter(staffProviders, 15, 205);
+const sectionInformation = document.querySelector(".section-information");
+
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting) {
+      counter(experienceYear, 25, 140);
+      counter(patientLevel, 95, 35, "%");
+      counter(patientServed, 7000, 50, "+", 100);
+      counter(staffProviders, 15, 205);
+
+      observer.unobserve(entry.target);
+    }
+  },
+  { threshold: 0.2 },
+);
+
+if (sectionInformation) {
+  observer.observe(sectionInformation);
+}
 
 const dateInput = document.querySelector(".date input");
 const arrowDate = document.querySelector(".date svg");

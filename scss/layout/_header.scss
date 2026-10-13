@@ -16,7 +16,7 @@ header {
       }
     }
   }
-  ul.contact-head ,
+  ul.contact-head,
   ul.menu-bar {
     @extend %flex-center;
     list-style: none;
@@ -102,7 +102,11 @@ header {
         visibility: hidden;
         overflow: hidden;
       }
-
+      &.active-bar {
+        max-height: 600px;
+        opacity: 1;
+        visibility: visible;
+      }
       > svg {
         font-size: 25px;
         display: none;
@@ -119,6 +123,9 @@ header {
           width: 100%;
           opacity: 0;
           transition: 0.3s ease-in-out;
+        }
+        &.visible-menubar {
+          opacity: 1;
         }
         li {
           font-size: 18px;

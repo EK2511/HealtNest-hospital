@@ -5,13 +5,11 @@
 /* base files */
 @use "./base/reset";
 @use "./base/typography";
-@use "./base/utilities";
 
 /* components */
 @use "./components/buttons";
 @use "./components/cards";
 @use "./components/headbox";
-@use "./components/selectItem";
 
 /* layout */
 @use "./layout/header";

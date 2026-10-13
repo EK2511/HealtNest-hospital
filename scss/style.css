@@ -4,7 +4,7 @@
   justify-content: space-between;
 }
 
-.packages .cards .image .discount, .section-blogs .cards .card .date-time, .section-blogs .cards .card .box button, .section-specialist .cards .card .box, .section-specialist .cards .card .box ul, .section-specialist .cards .card .box ul li, .department-section .cards .card .icon, .department-section .cards .card .arrow, .services-section .cards, .services-section .cards .card, .about-section .container .textbox button, .home-section .container, .home-section .container .group-button, .home-section .container .group-button .btn-reverse, footer .container .box:nth-child(4) ul, footer .container .box:nth-child(4) ul li, footer .container .box:nth-child(3) ul li svg, .search-bar .select-items, header ul.contact-head,
+.packages .cards .image .discount, .section-blogs .cards .card .date-time, .section-blogs .cards .card .box button, .section-specialist .cards .card .box, .section-specialist .cards .card .box ul, .section-specialist .cards .card .box ul li, .department-section .cards, .department-section .cards .card, .services-section .cards .card .icon, .services-section .cards .card .arrow, .about-section .container .textbox button, .home-section .container, .home-section .container .group-button, .home-section .container .group-button .btn-reverse, footer .container .box:nth-child(4) ul, footer .container .box:nth-child(4) ul li, footer .container .box:nth-child(3) ul li svg, .search-bar .select-items, header ul.contact-head,
 header ul.menu-bar, header ul.contact-head li,
 header ul.menu-bar li, header .main-header nav, header .main-header nav .search svg, .title button, .info-card .container .card {
   display: flex;
@@ -57,6 +57,10 @@ body {
 
 a {
   text-decoration: none;
+}
+
+span {
+  display: inline-block;
 }
 
 .container {
@@ -832,30 +836,91 @@ footer .copyright {
 .services-section {
   padding-top: 100px;
 }
+.services-section .cards .card {
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 30px;
+}
+.services-section .cards .card:hover {
+  color: #fefeff;
+  background-color: #1e6099;
+}
+.services-section .cards .card:hover .icon {
+  background-color: #fefeff;
+}
+.services-section .cards .card:hover .icon svg {
+  color: #1e6099;
+}
+.services-section .cards .card:hover p {
+  color: #fefeff;
+}
+.services-section .cards .card .icon {
+  background-color: #1e6099;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+  padding: 15px;
+  transition: 0.3s ease-out;
+  border-radius: 50%;
+}
+.services-section .cards .card .icon svg {
+  font-size: 22px;
+  color: #fefeff;
+}
+.services-section .cards .card span {
+  font-size: 22px;
+  font-weight: 600;
+  display: block;
+  margin-top: 15px;
+  transition: 0.3s ease-out;
+}
+.services-section .cards .card p {
+  margin-top: 15px;
+  color: #5f5f5f;
+  line-height: 1.7;
+  font-size: 14px;
+  transition: 0.3s ease-out;
+}
+.services-section .cards .card .arrow {
+  padding: 15px 20px;
+  margin-top: 15px;
+  background-color: #1e6099;
+  margin-inline: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #fefeff;
+  border: 2px solid #fefeff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.department-section {
+  padding-top: 100px;
+}
 @media (max-width: 768px) {
-  .services-section .cards {
+  .department-section .cards {
     flex-wrap: wrap;
   }
 }
-.services-section .cards .card {
+.department-section .cards .card {
   padding: 50px 30px;
   text-align: center;
   flex: 1;
   color: #1e6099;
   border-bottom: 5px solid transparent;
 }
-.services-section .cards .card:hover {
+.department-section .cards .card:hover {
   border-bottom-color: #1e6099;
 }
 @media (max-width: 768px) {
-  .services-section .cards .card {
+  .department-section .cards .card {
     flex-basis: 100%;
   }
 }
-.services-section .cards .card svg {
+.department-section .cards .card svg {
   font-size: 40px;
 }
-.services-section .cards .card span {
+.department-section .cards .card span {
   display: block;
   font-size: 19px;
   margin-top: 20px;
@@ -903,67 +968,6 @@ footer .copyright {
   margin-top: 15px;
 }
 
-.department-section {
-  padding-top: 100px;
-}
-.department-section .cards .card {
-  padding: 40px 30px;
-  text-align: center;
-  border-radius: 30px;
-}
-.department-section .cards .card:hover {
-  color: #fefeff;
-  background-color: #1e6099;
-}
-.department-section .cards .card:hover .icon {
-  background-color: #fefeff;
-}
-.department-section .cards .card:hover .icon svg {
-  color: #1e6099;
-}
-.department-section .cards .card:hover p {
-  color: #fefeff;
-}
-.department-section .cards .card .icon {
-  background-color: #1e6099;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-inline: auto;
-  padding: 15px;
-  transition: 0.3s ease-out;
-  border-radius: 50%;
-}
-.department-section .cards .card .icon svg {
-  font-size: 22px;
-  color: #fefeff;
-}
-.department-section .cards .card span {
-  font-size: 22px;
-  font-weight: 600;
-  display: block;
-  margin-top: 15px;
-  transition: 0.3s ease-out;
-}
-.department-section .cards .card p {
-  margin-top: 15px;
-  color: #5f5f5f;
-  line-height: 1.7;
-  font-size: 14px;
-  transition: 0.3s ease-out;
-}
-.department-section .cards .card .arrow {
-  padding: 15px 20px;
-  margin-top: 15px;
-  background-color: #1e6099;
-  margin-inline: auto;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #fefeff;
-  border: 2px solid #fefeff;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
 .section-specialist {
   padding-top: 100px;
 }
@@ -989,11 +993,6 @@ footer .copyright {
   flex-direction: column;
   padding: 30px;
   position: relative;
-}
-@media (max-width: 768px) {
-  .section-specialist .cards .card .box {
-    padding-block: 0;
-  }
 }
 .section-specialist .cards .card .box::before {
   content: attr(data-cat);
@@ -1042,6 +1041,14 @@ footer .copyright {
 }
 .section-specialist .cards .card .box ul li svg {
   color: #1e6099;
+}
+@media (max-width: 768px) {
+  .section-specialist .cards .card:first-of-type .box {
+    padding-bottom: 0;
+  }
+  .section-specialist .cards .card:nth-of-type(2) .box, .section-specialist .cards .card:nth-child(3) .box {
+    padding-block: 0;
+  }
 }
 .section-specialist .cards .card:hover ul li {
   background-color: #1e6099;

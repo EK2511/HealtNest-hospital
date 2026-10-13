@@ -140,3 +140,89 @@ setInterval(() => {
     el.classList.toggle("active-circle", indx == curIndex);
   });
 }, 5000);
+
+let originalEffect = {
+  origin: "bottom",
+  duration: 600,
+  distance: "50px",
+  opacity: 0,
+  interval: 150,
+};
+
+ScrollReveal().reveal(
+  document.querySelectorAll(".home-section .textbox .effect"),
+  {
+    ...originalEffect,
+    delay: 500,
+  },
+);
+
+ScrollReveal().reveal(".home-section .image", {
+  ...originalEffect,
+  delay: 500,
+  distance: "100px",
+  origin: "right",
+});
+
+ScrollReveal().reveal(document.querySelectorAll(".info-card .card "), {
+  ...originalEffect,
+  interval: 350,
+  distance: "0px",
+});
+ScrollReveal().reveal(".about-section .image", {
+  ...originalEffect,
+  delay: 400,
+  distance: "100px",
+  origin: "left",
+});
+
+ScrollReveal().reveal(document.querySelectorAll(".about-section .textbox * "), {
+  ...originalEffect,
+});
+ScrollReveal().reveal(document.querySelectorAll(".title"), {
+  ...originalEffect,
+  origin: "left",
+  delay: 100,
+});
+ScrollReveal().reveal(document.querySelectorAll(".cards  .card "), {
+  ...originalEffect,
+  delay: 300,
+  interval: 250,
+  distance: "0px",
+  scale: 1,
+});
+ScrollReveal().reveal(document.querySelectorAll(".section-information  * "), {
+  ...originalEffect,
+});
+ScrollReveal().reveal(document.querySelectorAll(".section-form  .image "), {
+  ...originalEffect,
+  origin: "left",
+});
+ScrollReveal().reveal(
+  document.querySelectorAll(".section-form  .box > *:not(form)"),
+  {
+    ...originalEffect,
+    origin: "left",
+  },
+);
+ScrollReveal().reveal(document.querySelectorAll(".section-form  form > div"), {
+  ...originalEffect,
+  origin: "left",
+});
+ScrollReveal().reveal(document.querySelector(".section-form  form textarea"), {
+  ...originalEffect,
+  origin: "left",
+  delay: 400,
+});
+ScrollReveal().reveal(document.querySelector(".section-form  form > input"), {
+  ...originalEffect,
+  origin: "left",
+  delay: 500,
+});
+ScrollReveal().reveal(document.querySelectorAll(".patients-say  * "), {
+  ...originalEffect,
+});
+ScrollReveal().reveal(document.querySelectorAll("footer .container >  * "), {
+  ...originalEffect,
+  delay: 300,
+});

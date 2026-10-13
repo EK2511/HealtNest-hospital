@@ -24,9 +24,6 @@
         flex-direction: column;
         padding: 30px;
         position: relative;
-        @include screen(phone) {
-          padding-block: 0;
-        }
         &::before {
           content: attr(data-cat);
           position: absolute;
@@ -78,6 +75,16 @@
           }
         }
       }
+      @include screen(phone) {
+        &:first-of-type .box {
+          padding-bottom: 0;
+        }
+        &:nth-of-type(2) .box,
+        &:nth-child(3) .box {
+          padding-block: 0;
+        }
+      }
+
       &:hover ul li {
         background-color: $color-primary-blue;
         svg {

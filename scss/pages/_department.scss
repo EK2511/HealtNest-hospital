@@ -2,20 +2,38 @@
 // back to this code
 .department-section {
   padding-top: $padding-block;
-  .cards {
-    @extend %flex-center;
-    @include screen(phone) {
-      flex-wrap: wrap;
-    }
-    .card {
-      padding: 50px 30px;
+
+  .swiper {
+    margin-top: 35px;
+    width: 100%;
+    padding: 15px 5px 25px 5px;
+    overflow: hidden;
+  }
+  .swiper-wrapper {
+
+    .swiper-slide {
+      background-color: $color-white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 15px;
+      padding: 40px 20px;
       text-align: center;
-      flex: 1;
-      @extend %flex-center;
-      color: $color-primary-blue;
+      box-shadow: 0px 6px 12px rgba($color-black, 0.08);
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+      border: 3px solid transparent;
       border-bottom: 5px solid transparent;
+      color: $color-primary-blue;
+      height: auto;
       &:hover {
         border-bottom-color: $color-primary-blue;
+        transform: translateY(-6px) scale(1.02);
+        border-color: $color-primary-blue;
+        box-shadow: 0px 4px 10px rgba($color: $color-charcoal, $alpha: 0.4);
       }
       @include screen(phone) {
         flex-basis: 100%;

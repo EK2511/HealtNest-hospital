@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Coustard:wght@400;900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="scss/style.css" />
     <script src="https://code.iconify.design/iconify-icon/3.0.0/iconify-icon.min.js"></script>
     <title>healthnest hospital</title>
@@ -401,7 +405,7 @@
       <div class="container">
         <div class="title">
           <div class="box">
-            <span class="head-box">our departments</span>
+            <span class="head-box">our services</span>
             <h3>for your health</h3>
           </div>
           <button class="btn">
@@ -581,74 +585,136 @@
             </svg>
           </button>
         </div>
-        <div class="cards">
-          <div class="card">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M14 5c-.5.5-1.503.412-3-.824m0 0q.332-.272.689-.626c2.306-2.284 5.446-1.837 6.917 0c.626.782 1.853 2.281 1.215 5.95M11 4.176q-.332-.272-.689-.626c-2.306-2.284-5.446-1.837-6.917 0C2.378 4.82-.222 7.98 6.142 19.24c.264.466.789.76 1.354.76c.902 0 1.607-.72 1.636-1.56c.046-1.303.298-2.755 1.001-3.44M16 17l.684.684c.147.147.221.221.31.216c.09-.005.155-.086.285-.249L19 15.5m-6-.046v.386c0 1.202 0 1.803.148 2.353a4.36 4.36 0 0 0 1.014 1.827c.39.422.906.75 1.937 1.407c.461.294.692.441.938.51c.303.084.624.084.927 0c.245-.069.476-.216.937-.51c1.031-.657 1.547-.985 1.937-1.407a4.36 4.36 0 0 0 1.014-1.827c.148-.55.148-1.15.148-2.353v-.386c0-.748 0-1.122-.142-1.438a1.7 1.7 0 0 0-.369-.52c-.253-.24-.612-.372-1.33-.635l-1.474-.54c-.586-.214-.879-.321-1.185-.321s-.599.107-1.185.322l-1.474.54c-.718.262-1.077.393-1.33.634a1.7 1.7 0 0 0-.37.52c-.141.316-.141.69-.141 1.438"
-              />
-            </svg>
-            <span>dental care</span>
-          </div>
-          <div class="card">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <path d="M0 0h24v24H0z" fill="none" />
-              <path
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M14 5c-.5.5-1.503.412-3-.824m0 0q.332-.272.689-.626c2.306-2.284 5.446-1.837 6.917 0c.626.782 1.853 2.281 1.215 5.95M11 4.176q-.332-.272-.689-.626c-2.306-2.284-5.446-1.837-6.917 0C2.378 4.82-.222 7.98 6.142 19.24c.264.466.789.76 1.354.76c.902 0 1.607-.72 1.636-1.56c.046-1.303.298-2.755 1.001-3.44M16 17l.684.684c.147.147.221.221.31.216c.09-.005.155-.086.285-.249L19 15.5m-6-.046v.386c0 1.202 0 1.803.148 2.353a4.36 4.36 0 0 0 1.014 1.827c.39.422.906.75 1.937 1.407c.461.294.692.441.938.51c.303.084.624.084.927 0c.245-.069.476-.216.937-.51c1.031-.657 1.547-.985 1.937-1.407a4.36 4.36 0 0 0 1.014-1.827c.148-.55.148-1.15.148-2.353v-.386c0-.748 0-1.122-.142-1.438a1.7 1.7 0 0 0-.369-.52c-.253-.24-.612-.372-1.33-.635l-1.474-.54c-.586-.214-.879-.321-1.185-.321s-.599.107-1.185.322l-1.474.54c-.718.262-1.077.393-1.33.634a1.7 1.7 0 0 0-.37.52c-.141.316-.141.69-.141 1.438"
-              />
-            </svg>
-            <span>Orthrology</span>
-          </div>
-          <div class="card">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="0.88em"
-              height="1em"
-              viewBox="0 0 448 512"
-            >
-              <path d="M0 0h448v512H0z" fill="none" />
-              <path
-                fill="currentColor"
-                d="M224 256a128 128 0 1 0 0-256a128 128 0 1 0 0 256m-96 55.2C54 332.9 0 401.3 0 482.3C0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7c0-81-54-149.4-128-171.1V362c27.6 7.1 48 32.2 48 62v40c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16s7.2-16 16-16v-24c0-17.7-14.3-32-32-32s-32 14.3-32 32v24c8.8 0 16 7.2 16 16s-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-40c0-29.8 20.4-54.9 48-62v-57.1q-9-.9-18.3-.9h-91.4q-9.3 0-18.3.9v65.4c23.1 6.9 40 28.3 40 53.7c0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.4 16.9-46.8 40-53.7zM144 448a24 24 0 1 0 0-48a24 24 0 1 0 0 48"
-              />
-            </svg>
-            <span>dermalogy</span>
-          </div>
-          <div class="card">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="0.88em"
-              height="1em"
-              viewBox="0 0 448 512"
-            >
-              <path d="M0 0h448v512H0z" fill="none" />
-              <path
-                fill="currentColor"
-                d="M224 256a128 128 0 1 0 0-256a128 128 0 1 0 0 256m-96 55.2C54 332.9 0 401.3 0 482.3C0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7c0-81-54-149.4-128-171.1V362c27.6 7.1 48 32.2 48 62v40c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16s7.2-16 16-16v-24c0-17.7-14.3-32-32-32s-32 14.3-32 32v24c8.8 0 16 7.2 16 16s-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-40c0-29.8 20.4-54.9 48-62v-57.1q-9-.9-18.3-.9h-91.4q-9.3 0-18.3.9v65.4c23.1 6.9 40 28.3 40 53.7c0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.4 16.9-46.8 40-53.7zM144 448a24 24 0 1 0 0-48a24 24 0 1 0 0 48"
-              />
-            </svg>
-            <span>Neurology</span>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M14 5c-.5.5-1.503.412-3-.824m0 0q.332-.272.689-.626c2.306-2.284 5.446-1.837 6.917 0c.626.782 1.853 2.281 1.215 5.95M11 4.176q-.332-.272-.689-.626c-2.306-2.284-5.446-1.837-6.917 0C2.378 4.82-.222 7.98 6.142 19.24c.264.466.789.76 1.354.76c.902 0 1.607-.72 1.636-1.56c.046-1.303.298-2.755 1.001-3.44M16 17l.684.684c.147.147.221.221.31.216c.09-.005.155-.086.285-.249L19 15.5m-6-.046v.386c0 1.202 0 1.803.148 2.353a4.36 4.36 0 0 0 1.014 1.827c.39.422.906.75 1.937 1.407c.461.294.692.441.938.51c.303.084.624.084.927 0c.245-.069.476-.216.937-.51c1.031-.657 1.547-.985 1.937-1.407a4.36 4.36 0 0 0 1.014-1.827c.148-.55.148-1.15.148-2.353v-.386c0-.748 0-1.122-.142-1.438a1.7 1.7 0 0 0-.369-.52c-.253-.24-.612-.372-1.33-.635l-1.474-.54c-.586-.214-.879-.321-1.185-.321s-.599.107-1.185.322l-1.474.54c-.718.262-1.077.393-1.33.634a1.7 1.7 0 0 0-.37.52c-.141.316-.141.69-.141 1.438"
+                />
+              </svg>
+              <span>dental care</span>
+            </div>
+            <div class="swiper-slide">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M14 5c-.5.5-1.503.412-3-.824m0 0q.332-.272.689-.626c2.306-2.284 5.446-1.837 6.917 0c.626.782 1.853 2.281 1.215 5.95M11 4.176q-.332-.272-.689-.626c-2.306-2.284-5.446-1.837-6.917 0C2.378 4.82-.222 7.98 6.142 19.24c.264.466.789.76 1.354.76c.902 0 1.607-.72 1.636-1.56c.046-1.303.298-2.755 1.001-3.44M16 17l.684.684c.147.147.221.221.31.216c.09-.005.155-.086.285-.249L19 15.5m-6-.046v.386c0 1.202 0 1.803.148 2.353a4.36 4.36 0 0 0 1.014 1.827c.39.422.906.75 1.937 1.407c.461.294.692.441.938.51c.303.084.624.084.927 0c.245-.069.476-.216.937-.51c1.031-.657 1.547-.985 1.937-1.407a4.36 4.36 0 0 0 1.014-1.827c.148-.55.148-1.15.148-2.353v-.386c0-.748 0-1.122-.142-1.438a1.7 1.7 0 0 0-.369-.52c-.253-.24-.612-.372-1.33-.635l-1.474-.54c-.586-.214-.879-.321-1.185-.321s-.599.107-1.185.322l-1.474.54c-.718.262-1.077.393-1.33.634a1.7 1.7 0 0 0-.37.52c-.141.316-.141.69-.141 1.438"
+                />
+              </svg>
+              <span>Orthrology</span>
+            </div>
+            <div class="swiper-slide">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="0.88em"
+                height="1em"
+                viewBox="0 0 448 512"
+              >
+                <path d="M0 0h448v512H0z" fill="none" />
+                <path
+                  fill="currentColor"
+                  d="M224 256a128 128 0 1 0 0-256a128 128 0 1 0 0 256m-96 55.2C54 332.9 0 401.3 0 482.3C0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7c0-81-54-149.4-128-171.1V362c27.6 7.1 48 32.2 48 62v40c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16s7.2-16 16-16v-24c0-17.7-14.3-32-32-32s-32 14.3-32 32v24c8.8 0 16 7.2 16 16s-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-40c0-29.8 20.4-54.9 48-62v-57.1q-9-.9-18.3-.9h-91.4q-9.3 0-18.3.9v65.4c23.1 6.9 40 28.3 40 53.7c0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.4 16.9-46.8 40-53.7zM144 448a24 24 0 1 0 0-48a24 24 0 1 0 0 48"
+                />
+              </svg>
+              <span>dermalogy</span>
+            </div>
+            <div class="swiper-slide">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="0.88em"
+                height="1em"
+                viewBox="0 0 448 512"
+              >
+                <path d="M0 0h448v512H0z" fill="none" />
+                <path
+                  fill="currentColor"
+                  d="M224 256a128 128 0 1 0 0-256a128 128 0 1 0 0 256m-96 55.2C54 332.9 0 401.3 0 482.3C0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7c0-81-54-149.4-128-171.1V362c27.6 7.1 48 32.2 48 62v40c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16s7.2-16 16-16v-24c0-17.7-14.3-32-32-32s-32 14.3-32 32v24c8.8 0 16 7.2 16 16s-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-40c0-29.8 20.4-54.9 48-62v-57.1q-9-.9-18.3-.9h-91.4q-9.3 0-18.3.9v65.4c23.1 6.9 40 28.3 40 53.7c0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.4 16.9-46.8 40-53.7zM144 448a24 24 0 1 0 0-48a24 24 0 1 0 0 48"
+                />
+              </svg>
+              <span>Neurology</span>
+            </div>
+            <div class="swiper-slide">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="0.88em"
+                height="1em"
+                viewBox="0 0 448 512"
+              >
+                <path d="M0 0h448v512H0z" fill="none" />
+                <path
+                  fill="currentColor"
+                  d="M224 256a128 128 0 1 0 0-256a128 128 0 1 0 0 256m-96 55.2C54 332.9 0 401.3 0 482.3C0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7c0-81-54-149.4-128-171.1V362c27.6 7.1 48 32.2 48 62v40c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16s7.2-16 16-16v-24c0-17.7-14.3-32-32-32s-32 14.3-32 32v24c8.8 0 16 7.2 16 16s-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-40c0-29.8 20.4-54.9 48-62v-57.1q-9-.9-18.3-.9h-91.4q-9.3 0-18.3.9v65.4c23.1 6.9 40 28.3 40 53.7c0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.4 16.9-46.8 40-53.7zM144 448a24 24 0 1 0 0-48a24 24 0 1 0 0 48"
+                />
+              </svg>
+              <span>pulmonology</span>
+            </div>
+            <div class="swiper-slide">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="0.88em"
+                height="1em"
+                viewBox="0 0 448 512"
+              >
+                <path d="M0 0h448v512H0z" fill="none" />
+                <path
+                  fill="currentColor"
+                  d="M224 256a128 128 0 1 0 0-256a128 128 0 1 0 0 256m-96 55.2C54 332.9 0 401.3 0 482.3C0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7c0-81-54-149.4-128-171.1V362c27.6 7.1 48 32.2 48 62v40c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16s7.2-16 16-16v-24c0-17.7-14.3-32-32-32s-32 14.3-32 32v24c8.8 0 16 7.2 16 16s-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-40c0-29.8 20.4-54.9 48-62v-57.1q-9-.9-18.3-.9h-91.4q-9.3 0-18.3.9v65.4c23.1 6.9 40 28.3 40 53.7c0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.4 16.9-46.8 40-53.7zM144 448a24 24 0 1 0 0-48a24 24 0 1 0 0 48"
+                />
+              </svg>
+              <span>paedriatics</span>
+            </div>
+            <div class="swiper-slide">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="0.88em"
+                height="1em"
+                viewBox="0 0 448 512"
+              >
+                <path d="M0 0h448v512H0z" fill="none" />
+                <path
+                  fill="currentColor"
+                  d="M224 256a128 128 0 1 0 0-256a128 128 0 1 0 0 256m-96 55.2C54 332.9 0 401.3 0 482.3C0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7c0-81-54-149.4-128-171.1V362c27.6 7.1 48 32.2 48 62v40c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16s7.2-16 16-16v-24c0-17.7-14.3-32-32-32s-32 14.3-32 32v24c8.8 0 16 7.2 16 16s-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-40c0-29.8 20.4-54.9 48-62v-57.1q-9-.9-18.3-.9h-91.4q-9.3 0-18.3.9v65.4c23.1 6.9 40 28.3 40 53.7c0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.4 16.9-46.8 40-53.7zM144 448a24 24 0 1 0 0-48a24 24 0 1 0 0 48"
+                />
+              </svg>
+              <span>gastrology</span>
+            </div>
+            <div class="swiper-slide">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="0.88em"
+                height="1em"
+                viewBox="0 0 448 512"
+              >
+                <path d="M0 0h448v512H0z" fill="none" />
+                <path
+                  fill="currentColor"
+                  d="M224 256a128 128 0 1 0 0-256a128 128 0 1 0 0 256m-96 55.2C54 332.9 0 401.3 0 482.3C0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7c0-81-54-149.4-128-171.1V362c27.6 7.1 48 32.2 48 62v40c0 8.8-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16s7.2-16 16-16v-24c0-17.7-14.3-32-32-32s-32 14.3-32 32v24c8.8 0 16 7.2 16 16s-7.2 16-16 16h-16c-8.8 0-16-7.2-16-16v-40c0-29.8 20.4-54.9 48-62v-57.1q-9-.9-18.3-.9h-91.4q-9.3 0-18.3.9v65.4c23.1 6.9 40 28.3 40 53.7c0 30.9-25.1 56-56 56s-56-25.1-56-56c0-25.4 16.9-46.8 40-53.7zM144 448a24 24 0 1 0 0-48a24 24 0 1 0 0 48"
+                />
+              </svg>
+              <span>gynaecology</span>
+            </div>
           </div>
         </div>
       </div>
@@ -700,197 +766,421 @@
             </svg>
           </button>
         </div>
-        <div class="cards">
-          <div class="card">
-            <div class="image">
-              <img src="imgs/specialist11.jpg" alt="specialist1" />
-            </div>
-            <div class="box" data-cat="cardiologist">
-              <span>dr. Smriti bajracharya, MD</span>
-              <span class="experience">10 + years experience</span>
-              <ul>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="1em"
-                    height="1em"
-                    viewBox="0 0 32 32"
-                  >
-                    <path d="M0 0h32v32H0z" fill="none" />
-                    <path
-                      fill="currentColor"
-                      d="m23.446 18l.889-5.791h-5.557V8.451c0-1.584.776-3.129 3.265-3.129h2.526V.392S22.277.001 20.085.001c-4.576 0-7.567 2.774-7.567 7.795v4.414H7.431v5.791h5.087v14h6.26v-14z"
-                    />
-                  </svg>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="1em"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <g fill="none">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="image">
+                <img src="imgs/specialist11.jpg" alt="specialist1" />
+              </div>
+              <div class="box" data-cat="cardiologist">
+                <span>dr. Smriti bajracharya, MD</span>
+                <span class="experience">10 + years experience</span>
+                <ul>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 32 32"
+                    >
+                      <path d="M0 0h32v32H0z" fill="none" />
                       <path
-                        stroke="currentColor"
-                        stroke-width="2"
-                        d="M3 11c0-3.771 0-5.657 1.172-6.828S7.229 3 11 3h2c3.771 0 5.657 0 6.828 1.172S21 7.229 21 11v2c0 3.771 0 5.657-1.172 6.828S16.771 21 13 21h-2c-3.771 0-5.657 0-6.828-1.172S3 16.771 3 13z"
+                        fill="currentColor"
+                        d="m23.446 18l.889-5.791h-5.557V8.451c0-1.584.776-3.129 3.265-3.129h2.526V.392S22.277.001 20.085.001c-4.576 0-7.567 2.774-7.567 7.795v4.414H7.431v5.791h5.087v14h6.26v-14z"
                       />
-                      <circle cx="16.5" cy="7.5" r="1.5" fill="currentColor" />
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="3"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </svg>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="1em"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path
-                      fill="currentColor"
-                      d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.23 13.23 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.65 4.65 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.7 4.7 0 0 1-2.104.08a4.66 4.66 0 0 0 4.352 3.234a9.35 9.35 0 0 1-5.786 1.995a10 10 0 0 1-1.112-.065a13.2 13.2 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254q0-.301-.014-.602a9.5 9.5 0 0 0 2.323-2.41z"
-                    />
-                  </svg>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="card">
-            <div class="image">
-              <img src="imgs/specialist2.jpg" alt="specialist2" />
-            </div>
-            <div class="box" data-cat="neurologist">
-              <span>dr. raj kunwar, MD</span>
-              <span class="experience">20 + years experience</span>
-              <ul>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="1em"
-                    height="1em"
-                    viewBox="0 0 32 32"
-                  >
-                    <path d="M0 0h32v32H0z" fill="none" />
-                    <path
-                      fill="currentColor"
-                      d="m23.446 18l.889-5.791h-5.557V8.451c0-1.584.776-3.129 3.265-3.129h2.526V.392S22.277.001 20.085.001c-4.576 0-7.567 2.774-7.567 7.795v4.414H7.431v5.791h5.087v14h6.26v-14z"
-                    />
-                  </svg>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="1em"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <g fill="none">
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <g fill="none">
+                        <path
+                          stroke="currentColor"
+                          stroke-width="2"
+                          d="M3 11c0-3.771 0-5.657 1.172-6.828S7.229 3 11 3h2c3.771 0 5.657 0 6.828 1.172S21 7.229 21 11v2c0 3.771 0 5.657-1.172 6.828S16.771 21 13 21h-2c-3.771 0-5.657 0-6.828-1.172S3 16.771 3 13z"
+                        />
+                        <circle
+                          cx="16.5"
+                          cy="7.5"
+                          r="1.5"
+                          fill="currentColor"
+                        />
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="3"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none" />
                       <path
-                        stroke="currentColor"
-                        stroke-width="2"
-                        d="M3 11c0-3.771 0-5.657 1.172-6.828S7.229 3 11 3h2c3.771 0 5.657 0 6.828 1.172S21 7.229 21 11v2c0 3.771 0 5.657-1.172 6.828S16.771 21 13 21h-2c-3.771 0-5.657 0-6.828-1.172S3 16.771 3 13z"
+                        fill="currentColor"
+                        d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.23 13.23 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.65 4.65 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.7 4.7 0 0 1-2.104.08a4.66 4.66 0 0 0 4.352 3.234a9.35 9.35 0 0 1-5.786 1.995a10 10 0 0 1-1.112-.065a13.2 13.2 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254q0-.301-.014-.602a9.5 9.5 0 0 0 2.323-2.41z"
                       />
-                      <circle cx="16.5" cy="7.5" r="1.5" fill="currentColor" />
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="3"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      />
-                    </g>
-                  </svg>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="1em"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path
-                      fill="currentColor"
-                      d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.23 13.23 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.65 4.65 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.7 4.7 0 0 1-2.104.08a4.66 4.66 0 0 0 4.352 3.234a9.35 9.35 0 0 1-5.786 1.995a10 10 0 0 1-1.112-.065a13.2 13.2 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254q0-.301-.014-.602a9.5 9.5 0 0 0 2.323-2.41z"
-                    />
-                  </svg>
-                </li>
-              </ul>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="image">
-              <img src="imgs/specialist3.jpg" alt="specialist3" />
-            </div>
-            <div class="box" data-cat="dermatologist">
-              <span>dr. javeda shrestha, MD</span>
-              <span class="experience">15 + years experience</span>
-              <ul>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="1em"
-                    height="1em"
-                    viewBox="0 0 32 32"
-                  >
-                    <path d="M0 0h32v32H0z" fill="none" />
-                    <path
-                      fill="currentColor"
-                      d="m23.446 18l.889-5.791h-5.557V8.451c0-1.584.776-3.129 3.265-3.129h2.526V.392S22.277.001 20.085.001c-4.576 0-7.567 2.774-7.567 7.795v4.414H7.431v5.791h5.087v14h6.26v-14z"
-                    />
-                  </svg>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="1em"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <g fill="none">
+            <div class="swiper-slide">
+              <div class="image">
+                <img src="imgs/specialist2.jpg" alt="specialist2" />
+              </div>
+              <div class="box" data-cat="neurologist">
+                <span>dr. raj kunwar, MD</span>
+                <span class="experience">20 + years experience</span>
+                <ul>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 32 32"
+                    >
+                      <path d="M0 0h32v32H0z" fill="none" />
                       <path
-                        stroke="currentColor"
-                        stroke-width="2"
-                        d="M3 11c0-3.771 0-5.657 1.172-6.828S7.229 3 11 3h2c3.771 0 5.657 0 6.828 1.172S21 7.229 21 11v2c0 3.771 0 5.657-1.172 6.828S16.771 21 13 21h-2c-3.771 0-5.657 0-6.828-1.172S3 16.771 3 13z"
+                        fill="currentColor"
+                        d="m23.446 18l.889-5.791h-5.557V8.451c0-1.584.776-3.129 3.265-3.129h2.526V.392S22.277.001 20.085.001c-4.576 0-7.567 2.774-7.567 7.795v4.414H7.431v5.791h5.087v14h6.26v-14z"
                       />
-                      <circle cx="16.5" cy="7.5" r="1.5" fill="currentColor" />
-                      <circle
-                        cx="12"
-                        cy="12"
-                        r="3"
-                        stroke="currentColor"
-                        stroke-width="2"
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <g fill="none">
+                        <path
+                          stroke="currentColor"
+                          stroke-width="2"
+                          d="M3 11c0-3.771 0-5.657 1.172-6.828S7.229 3 11 3h2c3.771 0 5.657 0 6.828 1.172S21 7.229 21 11v2c0 3.771 0 5.657-1.172 6.828S16.771 21 13 21h-2c-3.771 0-5.657 0-6.828-1.172S3 16.771 3 13z"
+                        />
+                        <circle
+                          cx="16.5"
+                          cy="7.5"
+                          r="1.5"
+                          fill="currentColor"
+                        />
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="3"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        fill="currentColor"
+                        d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.23 13.23 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.65 4.65 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.7 4.7 0 0 1-2.104.08a4.66 4.66 0 0 0 4.352 3.234a9.35 9.35 0 0 1-5.786 1.995a10 10 0 0 1-1.112-.065a13.2 13.2 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254q0-.301-.014-.602a9.5 9.5 0 0 0 2.323-2.41z"
                       />
-                    </g>
-                  </svg>
-                </li>
-                <li>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="1em"
-                    height="1em"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M0 0h24v24H0z" fill="none" />
-                    <path
-                      fill="currentColor"
-                      d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.23 13.23 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.65 4.65 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.7 4.7 0 0 1-2.104.08a4.66 4.66 0 0 0 4.352 3.234a9.35 9.35 0 0 1-5.786 1.995a10 10 0 0 1-1.112-.065a13.2 13.2 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254q0-.301-.014-.602a9.5 9.5 0 0 0 2.323-2.41z"
-                    />
-                  </svg>
-                </li>
-              </ul>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image">
+                <img src="imgs/specialist3.jpg" alt="specialist3" />
+              </div>
+              <div class="box" data-cat="dermatologist">
+                <span>dr. javeda shrestha, MD</span>
+                <span class="experience">15 + years experience</span>
+                <ul>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 32 32"
+                    >
+                      <path d="M0 0h32v32H0z" fill="none" />
+                      <path
+                        fill="currentColor"
+                        d="m23.446 18l.889-5.791h-5.557V8.451c0-1.584.776-3.129 3.265-3.129h2.526V.392S22.277.001 20.085.001c-4.576 0-7.567 2.774-7.567 7.795v4.414H7.431v5.791h5.087v14h6.26v-14z"
+                      />
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <g fill="none">
+                        <path
+                          stroke="currentColor"
+                          stroke-width="2"
+                          d="M3 11c0-3.771 0-5.657 1.172-6.828S7.229 3 11 3h2c3.771 0 5.657 0 6.828 1.172S21 7.229 21 11v2c0 3.771 0 5.657-1.172 6.828S16.771 21 13 21h-2c-3.771 0-5.657 0-6.828-1.172S3 16.771 3 13z"
+                        />
+                        <circle
+                          cx="16.5"
+                          cy="7.5"
+                          r="1.5"
+                          fill="currentColor"
+                        />
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="3"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        fill="currentColor"
+                        d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.23 13.23 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.65 4.65 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.7 4.7 0 0 1-2.104.08a4.66 4.66 0 0 0 4.352 3.234a9.35 9.35 0 0 1-5.786 1.995a10 10 0 0 1-1.112-.065a13.2 13.2 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254q0-.301-.014-.602a9.5 9.5 0 0 0 2.323-2.41z"
+                      />
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image">
+                <img src="imgs/Rectangle_158-4.jpg" alt="specialist4" />
+              </div>
+              <div class="box" data-cat="orthologist">
+                <span>dr. rameshwor maharjan, MD</span>
+                <span class="experience">10 + years experience</span>
+                <ul>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 32 32"
+                    >
+                      <path d="M0 0h32v32H0z" fill="none" />
+                      <path
+                        fill="currentColor"
+                        d="m23.446 18l.889-5.791h-5.557V8.451c0-1.584.776-3.129 3.265-3.129h2.526V.392S22.277.001 20.085.001c-4.576 0-7.567 2.774-7.567 7.795v4.414H7.431v5.791h5.087v14h6.26v-14z"
+                      />
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <g fill="none">
+                        <path
+                          stroke="currentColor"
+                          stroke-width="2"
+                          d="M3 11c0-3.771 0-5.657 1.172-6.828S7.229 3 11 3h2c3.771 0 5.657 0 6.828 1.172S21 7.229 21 11v2c0 3.771 0 5.657-1.172 6.828S16.771 21 13 21h-2c-3.771 0-5.657 0-6.828-1.172S3 16.771 3 13z"
+                        />
+                        <circle
+                          cx="16.5"
+                          cy="7.5"
+                          r="1.5"
+                          fill="currentColor"
+                        />
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="3"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        fill="currentColor"
+                        d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.23 13.23 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.65 4.65 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.7 4.7 0 0 1-2.104.08a4.66 4.66 0 0 0 4.352 3.234a9.35 9.35 0 0 1-5.786 1.995a10 10 0 0 1-1.112-.065a13.2 13.2 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254q0-.301-.014-.602a9.5 9.5 0 0 0 2.323-2.41z"
+                      />
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image">
+                <img src="imgs/Rectangle_158-5.jpg" alt="specialist5" />
+              </div>
+              <div class="box" data-cat="cardiologist">
+                <span>dr. shyam gopal, MD</span>
+                <span class="experience">20 + years experience</span>
+                <ul>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 32 32"
+                    >
+                      <path d="M0 0h32v32H0z" fill="none" />
+                      <path
+                        fill="currentColor"
+                        d="m23.446 18l.889-5.791h-5.557V8.451c0-1.584.776-3.129 3.265-3.129h2.526V.392S22.277.001 20.085.001c-4.576 0-7.567 2.774-7.567 7.795v4.414H7.431v5.791h5.087v14h6.26v-14z"
+                      />
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <g fill="none">
+                        <path
+                          stroke="currentColor"
+                          stroke-width="2"
+                          d="M3 11c0-3.771 0-5.657 1.172-6.828S7.229 3 11 3h2c3.771 0 5.657 0 6.828 1.172S21 7.229 21 11v2c0 3.771 0 5.657-1.172 6.828S16.771 21 13 21h-2c-3.771 0-5.657 0-6.828-1.172S3 16.771 3 13z"
+                        />
+                        <circle
+                          cx="16.5"
+                          cy="7.5"
+                          r="1.5"
+                          fill="currentColor"
+                        />
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="3"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        fill="currentColor"
+                        d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.23 13.23 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.65 4.65 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.7 4.7 0 0 1-2.104.08a4.66 4.66 0 0 0 4.352 3.234a9.35 9.35 0 0 1-5.786 1.995a10 10 0 0 1-1.112-.065a13.2 13.2 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254q0-.301-.014-.602a9.5 9.5 0 0 0 2.323-2.41z"
+                      />
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="image">
+                <img src="imgs/Rectangle_158-6.jpg" alt="specialist6" />
+              </div>
+              <div class="box" data-cat="neurologist">
+                <span>dr. heera manandhar, MD</span>
+                <span class="experience">15 + years experience</span>
+                <ul>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 32 32"
+                    >
+                      <path d="M0 0h32v32H0z" fill="none" />
+                      <path
+                        fill="currentColor"
+                        d="m23.446 18l.889-5.791h-5.557V8.451c0-1.584.776-3.129 3.265-3.129h2.526V.392S22.277.001 20.085.001c-4.576 0-7.567 2.774-7.567 7.795v4.414H7.431v5.791h5.087v14h6.26v-14z"
+                      />
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <g fill="none">
+                        <path
+                          stroke="currentColor"
+                          stroke-width="2"
+                          d="M3 11c0-3.771 0-5.657 1.172-6.828S7.229 3 11 3h2c3.771 0 5.657 0 6.828 1.172S21 7.229 21 11v2c0 3.771 0 5.657-1.172 6.828S16.771 21 13 21h-2c-3.771 0-5.657 0-6.828-1.172S3 16.771 3 13z"
+                        />
+                        <circle
+                          cx="16.5"
+                          cy="7.5"
+                          r="1.5"
+                          fill="currentColor"
+                        />
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="3"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                      </g>
+                    </svg>
+                  </li>
+                  <li>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M0 0h24v24H0z" fill="none" />
+                      <path
+                        fill="currentColor"
+                        d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.23 13.23 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.65 4.65 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.7 4.7 0 0 1-2.104.08a4.66 4.66 0 0 0 4.352 3.234a9.35 9.35 0 0 1-5.786 1.995a10 10 0 0 1-1.112-.065a13.2 13.2 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254q0-.301-.014-.602a9.5 9.5 0 0 0 2.323-2.41z"
+                      />
+                    </svg>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -1437,6 +1727,7 @@
         </p>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
   </body>

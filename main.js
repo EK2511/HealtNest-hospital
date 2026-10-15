@@ -1,5 +1,4 @@
 const swiper = new Swiper(".department-section .swiper", {
-  // Optional parameters
   loop: true,
   speed: 400,
   spaceBetween: 15,
@@ -51,97 +50,80 @@ let originalEffect = {
   interval: 150,
 };
 
-ScrollReveal().reveal(document.querySelectorAll("header"), {
-  ...originalEffect,
-  origin: "top",
-  delay: 250,
+let effectItems = [
+  { selector: "header", style: { origin: "top", delay: 250 } },
+  {
+    selector: "header .contact-head li , header .contact  button",
+    style: { origin: "top", delay: 350 },
+  },
+  {
+    selector: "header .main-header  .content a , header .main-header  nav > *",
+    style: { origin: "top", delay: 600 },
+  },
+  { selector: ".home-section", style: { delay: 700, origin: "top" } },
+  {
+    selector: ".home-section .textbox > *",
+    style: { delay: 900, origin: "left" },
+  },
+  { selector: ".info-card .card ", style: { interval: 400, distance: "0px" } },
+  {
+    selector: ".about-section .image",
+    style: { delay: 350, distance: "100px", origin: "left" },
+  },
+  {
+    selector: ".about-section .textbox > * ",
+    style: { delay: 500 },
+  },
+  {
+    selector: ".title",
+    style: { origin: "left", delay: 80 },
+  },
+  {
+    selector: ".cards  .card ",
+    style: { delay: 350, interval: 250, distance: "0px", scale: 1 },
+  },
+  {
+    selector: ".swiper",
+    style: { delay: 300 },
+  },
+  {
+    selector: ".section-information ",
+    style: {},
+  },
+  {
+    selector: ".section-information  .info ",
+    style: { delay: 150 },
+  },
+  {
+    selector: ".section-form  .image ",
+    style: { origin: "left", delay: 200 },
+  },
+  {
+    selector: ".section-form  .box > span , .section-form  .box > h3",
+    style: { origin: "left", delay: 300 },
+  },
+  {
+    selector: ".section-form  form > *",
+    style: { origin: "left", delay: 400 },
+  },
+  {
+    selector: ".patients-say  * ",
+    style: { interval: 80 },
+  },
+  {
+    selector: "footer .container >  * ",
+    style: { delay: 300 },
+  },
+  {
+    selector: "footer .copyright p ",
+    style: { delay: 500, origin: "left" },
+  },
+];
+
+effectItems.forEach(({ selector, style }) => {
+  ScrollReveal().reveal(selector, { ...originalEffect, ...style });
 });
 
-ScrollReveal().reveal(".home-section", {
-  ...originalEffect,
-  delay: 650,
-  origin: "top",
-});
-
-ScrollReveal().reveal(document.querySelectorAll(".info-card .card "), {
-  ...originalEffect,
-  interval: 400,
-  distance: "0px",
-});
-ScrollReveal().reveal(".about-section .image", {
-  ...originalEffect,
-  delay: 300,
-  distance: "100px",
-  origin: "left",
-});
-
-ScrollReveal().reveal(document.querySelectorAll(".about-section .textbox * "), {
-  ...originalEffect,
-  delay: 450,
-});
-ScrollReveal().reveal(document.querySelectorAll(".title"), {
-  ...originalEffect,
-  origin: "left",
-  delay: 50,
-});
-ScrollReveal().reveal(document.querySelectorAll(".cards  .card "), {
-  ...originalEffect,
-  delay: 250,
-  interval: 250,
-  distance: "0px",
-});
-ScrollReveal().reveal(
-  document.querySelectorAll(".department-section  .swiper-wrapper"),
-  {
-    ...originalEffect,
-    delay: 300,
-  },
-);
-ScrollReveal().reveal(
-  document.querySelectorAll(".section-specialist  .swiper-wrapper "),
-  {
-    ...originalEffect,
-    delay: 300,
-  },
-);
-ScrollReveal().reveal(document.querySelectorAll(".section-information  * "), {
-  ...originalEffect,
-});
-ScrollReveal().reveal(
-  document.querySelectorAll(".section-information  .info "),
-  {
-    ...originalEffect,
-    delay: 150,
-  },
-);
-ScrollReveal().reveal(document.querySelectorAll(".section-form  .image "), {
-  ...originalEffect,
-  origin: "left",
-  delay: 250,
-});
-ScrollReveal().reveal(
-  document.querySelectorAll(
-    ".section-form  .box > span , .section-form  .box > h3",
-  ),
-  {
-    ...originalEffect,
-    origin: "left",
-    delay: 400,
-  },
-);
-ScrollReveal().reveal(document.querySelectorAll(".section-form  form > *"), {
-  ...originalEffect,
-  origin: "left",
-  delay: 500,
-});
-ScrollReveal().reveal(document.querySelectorAll(".patients-say  * "), {
-  ...originalEffect,
-  interval: 100,
-});
-ScrollReveal().reveal(document.querySelectorAll("footer .container >  * "), {
-  ...originalEffect,
-  delay: 300,
-});
 
 const search = document.querySelector(".bar-slide");
 const searchBar = document.querySelector(".search-bar");

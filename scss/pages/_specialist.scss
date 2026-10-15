@@ -10,13 +10,16 @@
     overflow: hidden;
   }
   .swiper-wrapper {
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
       display: flex;
     }
   }
   .swiper-slide {
     height: auto;
     display: flex;
+    @media (min-width: 768px) {
+      flex-basis: calc((100% / 2) - 10px);
+    }
     @media (min-width: 992px) {
       flex-basis: calc((100% / 3) - 16px);
     }

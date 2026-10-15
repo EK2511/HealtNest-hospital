@@ -103,8 +103,8 @@ let effectItems = [
     style: { origin: "left", delay: 300 },
   },
   {
-    selector: ".section-form  form > *",
-    style: { origin: "left", delay: 400 },
+    selector: ".section-form  form ",
+    style: { origin: "left", delay: 500 },
   },
   {
     selector: ".patients-say  * ",
@@ -112,18 +112,17 @@ let effectItems = [
   },
   {
     selector: "footer .container >  * ",
-    style: { delay: 300 },
+    style: { delay: 500 },
   },
   {
     selector: "footer .copyright p ",
-    style: { delay: 500, origin: "left" },
+    style: { delay: 550, origin: "left" },
   },
 ];
 
 effectItems.forEach(({ selector, style }) => {
   ScrollReveal().reveal(selector, { ...originalEffect, ...style });
 });
-
 
 const search = document.querySelector(".bar-slide");
 const searchBar = document.querySelector(".search-bar");

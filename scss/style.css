@@ -514,7 +514,7 @@ header .main-header nav .search svg:hover {
 }
 .row div ul {
   width: 100%;
-  z-index: 100;
+  z-index: 100 !important;
   transition: height 0.3s ease-in-out, opacity 0.2s ease-in-out;
   top: 100%;
   height: 0;
@@ -994,7 +994,7 @@ footer .copyright {
   padding: 15px 10px 25px;
   overflow: hidden;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .section-specialist .swiper-wrapper {
     display: flex;
   }
@@ -1002,6 +1002,11 @@ footer .copyright {
 .section-specialist .swiper-slide {
   height: auto;
   display: flex;
+}
+@media (min-width: 768px) {
+  .section-specialist .swiper-slide {
+    flex-basis: calc(50% - 10px);
+  }
 }
 @media (min-width: 992px) {
   .section-specialist .swiper-slide {

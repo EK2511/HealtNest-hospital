@@ -237,6 +237,10 @@ input[type=submit] {
 }
 
 /* layout */
+header {
+  position: relative;
+  z-index: 100;
+}
 header .contact {
   padding: 10px;
   background-color: #0e0e0e;
@@ -987,12 +991,24 @@ footer .copyright {
 .section-specialist .swiper {
   width: 100%;
   margin-top: 35px;
-  padding: 15px 5px 25px;
+  padding: 15px 10px 25px;
   overflow: hidden;
+}
+@media (min-width: 992px) {
+  .section-specialist .swiper-wrapper {
+    display: flex;
+  }
 }
 .section-specialist .swiper-slide {
   height: auto;
   display: flex;
+}
+@media (min-width: 992px) {
+  .section-specialist .swiper-slide {
+    flex-basis: calc(33.3333333333% - 16px);
+  }
+}
+.section-specialist .swiper-slide {
   flex-direction: column;
   background-color: #ffffff;
   border: 3px solid transparent;

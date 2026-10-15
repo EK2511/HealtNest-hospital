@@ -6,13 +6,20 @@
   .swiper {
     width: 100%;
     margin-top: 35px;
-    padding: 15px 5px 25px;
+    padding: 15px 10px 25px;
     overflow: hidden;
   }
-
+  .swiper-wrapper {
+    @media (min-width: 992px) {
+      display: flex;
+    }
+  }
   .swiper-slide {
     height: auto;
     display: flex;
+    @media (min-width: 992px) {
+      flex-basis: calc((100% / 3) - 16px);
+    }
     flex-direction: column;
     background-color: $color-white;
     border: 3px solid transparent;
@@ -20,8 +27,6 @@
     overflow: hidden;
     box-shadow: 0px 6px 12px rgba($color-black, 0.08);
     transition: 0.3s ease-in-out;
-;
-
     &:hover {
       transform: translateY(-6px);
       border-color: $color-primary-blue;

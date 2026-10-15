@@ -51,45 +51,44 @@ let originalEffect = {
   interval: 150,
 };
 
-ScrollReveal().reveal(
-  document.querySelectorAll(".home-section .textbox .effect"),
-  {
-    ...originalEffect,
-    delay: 500,
-  },
-);
-
-ScrollReveal().reveal(".home-section .image", {
+ScrollReveal().reveal(document.querySelectorAll("header"), {
   ...originalEffect,
-  delay: 500,
+  origin: "top",
+  delay: 250,
+});
+
+ScrollReveal().reveal(".home-section", {
+  ...originalEffect,
+  delay: 650,
+  origin: "top",
 });
 
 ScrollReveal().reveal(document.querySelectorAll(".info-card .card "), {
   ...originalEffect,
-  interval: 350,
+  interval: 400,
   distance: "0px",
 });
 ScrollReveal().reveal(".about-section .image", {
   ...originalEffect,
-  delay: 400,
+  delay: 300,
   distance: "100px",
   origin: "left",
 });
 
 ScrollReveal().reveal(document.querySelectorAll(".about-section .textbox * "), {
   ...originalEffect,
+  delay: 450,
 });
 ScrollReveal().reveal(document.querySelectorAll(".title"), {
   ...originalEffect,
   origin: "left",
-  delay: 100,
+  delay: 50,
 });
 ScrollReveal().reveal(document.querySelectorAll(".cards  .card "), {
   ...originalEffect,
-  delay: 300,
+  delay: 250,
   interval: 250,
   distance: "0px",
-  scale: 1,
 });
 ScrollReveal().reveal(
   document.querySelectorAll(".department-section  .swiper-wrapper"),
@@ -108,33 +107,36 @@ ScrollReveal().reveal(
 ScrollReveal().reveal(document.querySelectorAll(".section-information  * "), {
   ...originalEffect,
 });
+ScrollReveal().reveal(
+  document.querySelectorAll(".section-information  .info "),
+  {
+    ...originalEffect,
+    delay: 150,
+  },
+);
 ScrollReveal().reveal(document.querySelectorAll(".section-form  .image "), {
   ...originalEffect,
   origin: "left",
+  delay: 250,
 });
 ScrollReveal().reveal(
-  document.querySelectorAll(".section-form  .box > *:not(form)"),
+  document.querySelectorAll(
+    ".section-form  .box > span , .section-form  .box > h3",
+  ),
   {
     ...originalEffect,
     origin: "left",
+    delay: 400,
   },
 );
-ScrollReveal().reveal(document.querySelectorAll(".section-form  form > div"), {
+ScrollReveal().reveal(document.querySelectorAll(".section-form  form > *"), {
   ...originalEffect,
   origin: "left",
-});
-ScrollReveal().reveal(document.querySelector(".section-form  form textarea"), {
-  ...originalEffect,
-  origin: "left",
-  delay: 200,
-});
-ScrollReveal().reveal(document.querySelector(".section-form  form > input"), {
-  ...originalEffect,
-  origin: "left",
-  delay: 300,
+  delay: 500,
 });
 ScrollReveal().reveal(document.querySelectorAll(".patients-say  * "), {
   ...originalEffect,
+  interval: 100,
 });
 ScrollReveal().reveal(document.querySelectorAll("footer .container >  * "), {
   ...originalEffect,

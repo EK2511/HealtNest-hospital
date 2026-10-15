@@ -1,5 +1,7 @@
 @use "../abstracts/" as *;
 header {
+  position: relative;
+  z-index: 100;
   .contact {
     padding: 10px;
     background-color: $color-dark-black;

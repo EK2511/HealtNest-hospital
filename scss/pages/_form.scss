@@ -84,3 +84,14 @@
     }
   }
 }
+
+.air-datepicker-body--day-name {
+  color: $color-primary-blue !important;
+}
+.air-datepicker-cell.-selected- {
+  background-color: $color-primary-blue !important;
+}
+.air-datepicker-cell.-focus- {
+  background-color: $color-blue-soft !important;
+  color: $color-black !important;
+}

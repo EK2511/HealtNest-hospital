@@ -1,3 +1,19 @@
+import AirDatepicker from "air-datepicker";
+import "air-datepicker/air-datepicker.css";
+import localeEn from "air-datepicker/locale/en";
+import "./style.scss";
+import home1 from "./asset/home1.jpg";
+import home2 from "./asset/home2.jpg";
+import home3 from "./asset/home3.jpg";
+import user1 from "./asset/user1.jpg";
+import user2 from "./asset/user2.jpg";
+import user3 from "./asset/user3.jpg";
+
+let date = new AirDatepicker("#date-input", {
+  locale: localeEn,
+  autoClose: true,
+});
+
 const swiper = new Swiper(".department-section .swiper", {
   loop: true,
   speed: 400,
@@ -141,12 +157,12 @@ bar.onclick = function () {
 };
 
 const homeImage = document.querySelector(".home-section .image");
-const photoUrl = ["home1.jpg", "home2.jpg", "home3.jpg"];
+const photoUrl = [home1, home2, home3];
 let currentIndex = 0;
 
 setInterval(() => {
   currentIndex = (currentIndex + 1) % photoUrl.length;
-  homeImage.style.backgroundImage = `url(imgs/${photoUrl[currentIndex]})`;
+  homeImage.style.backgroundImage = `url('${photoUrl[currentIndex]}')`;
 }, 5000);
 
 const experienceYear = document.getElementById("year");
@@ -186,14 +202,16 @@ if (sectionInformation) {
   observer.observe(sectionInformation);
 }
 
-const dateInput = document.querySelector(".date input");
 const arrowDate = document.querySelector(".date svg");
 const timeInput = document.querySelector(".time input");
 const arrowTime = document.querySelector(".time svg");
 
 arrowDate.onclick = () => {
-  dateInput.type = "date";
-  dateInput.showPicker();
+  if (date.visible) {
+    date.hide();
+  } else {
+    date.show();
+  }
 };
 arrowTime.onclick = () => {
   timeInput.type = "time";
@@ -233,21 +251,21 @@ const circleLight = document.querySelectorAll(".patients-say .circle li");
 
 const details = [
   {
-    photo: "user1.jpg",
+    photo: user1,
     comment:
       "Lorem Ipsum Dolor Sit Amet Consectetur. Sit Sagittis Velit Orci Elementum. Mauris Rhoncus Viverra Blandit Adipiscing Sed Dui Cursus. Dignissim Laoreet Volutpat Sit Ultrices Parturient Sem In. Blandit Id Facilisis Lorem Molestie Consectetur Rutrum Ridiculus.",
     userName: "Alexa Manhoss",
     endComment: "Kidney Transplant",
   },
   {
-    photo: "user2.jpg",
+    photo: user2,
     comment:
       "Phasellus Viverra Nulla Ut Metus Varius Laoreet. Quisque Rutrum. Aenean Imperdiet. Etiam Ultricies Nisi Vel Augue. Curabitur Ullamcorper Ultricies Nisi. Nam Eget Dui. Etiam Rhoncus Maecenas Tempus Tellus Eget.",
     userName: "David Miller",
     endComment: "Orthopedic Care",
   },
   {
-    photo: "user3.jpg",
+    photo: user3,
     comment:
       "Integer Tincidunt Cras Dapibus. Vivamus Elementum Semper Nisi. Aenean Vulputate Eleifend Tellus. Aenean Leo Ligula Porttitor Eu Consequat Vitae Eleifend Ac Enim. Aliquam Lorem Ante Dapibus In Viverra Quis Feugiat A Tellus.",
     userName: "Sarah Jenkins",
@@ -258,7 +276,7 @@ let curIndex = 0;
 
 setInterval(() => {
   curIndex = (curIndex + 1) % details.length;
-  userPhoto.style.backgroundImage = `url(imgs/${details[curIndex].photo})`;
+  userPhoto.style.backgroundImage = `url('${details[curIndex].photo}')`;
   userName.textContent = details[curIndex].userName;
   comment.textContent = details[curIndex].comment;
   paragraphEnd.textContent = details[curIndex].endComment;

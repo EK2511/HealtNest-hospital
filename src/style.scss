@@ -1,0 +1,28 @@
+@use "../scss/abstracts/variables";
+@use "../scss/abstracts/mixins";
+@use "../scss/abstracts/placeholder";
+
+/* base files */
+@use "../scss/base/reset";
+@use "../scss/base/typography";
+
+/* components */
+@use "../scss/components/buttons";
+@use "../scss/components/cards";
+@use "../scss/components/headbox";
+
+/* layout */
+@use "../scss/layout/header";
+@use "../scss/layout/searchbar";
+@use "../scss/layout/footer";
+
+/* pages */
+@use "../scss/pages/home";
+@use "../scss/pages/about";
+@use "../scss/pages/services";
+@use "../scss/pages/department";
+@use "../scss/pages/specialist";
+@use "../scss/pages/form";
+@use "../scss/pages/blogs";
+@use "../scss/pages/says";
+@use "../scss/pages/packages";

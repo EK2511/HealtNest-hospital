@@ -1,0 +1,41 @@
+{
+  "name": "8",
+  "version": "1.0.0",
+  "description": "| Technology            | How it is used                                                                                |\r | --------------------- | --------------------------------------------------------------------------------------------- |\r | **HTML5**             | Semantic structure (`header`, `nav`, `section`, `footer`), accessible and SEO-friendly markup |\r | **CSS3 / SCSS**       | Flexbox, CSS Grid, media queries, gradients, transitions                                      |\r | **JavaScript (ES6+)** | DOM manipulation, arrow functions, template literals, spread operator, array methods          |",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "air-datepicker": "^3.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^8.0.7",
+    "@babel/preset-env": "^8.0.7",
+    "babel-loader": "^10.1.1",
+    "css-loader": "^7.1.5",
+    "css-minimizer-webpack-plugin": "^8.0.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.8",
+    "mini-css-extract-plugin": "^2.10.2",
+    "purgecss-webpack-plugin": "^8.0.0",
+    "sass": "^1.106.1",
+    "sass-loader": "^17.0.1",
+    "style-loader": "^4.0.0",
+    "terser-webpack-plugin": "^5.6.1",
+    "webpack": "^5.112.0",
+    "webpack-cli": "^7.2.3"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EK2511/HealtNest-hospital.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EK2511/HealtNest-hospital/issues"
+  },
+  "homepage": "https://github.com/EK2511/HealtNest-hospital#readme"
+}

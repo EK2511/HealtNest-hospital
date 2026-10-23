@@ -7,8 +7,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 // To resolve this issue and ensure that both CSS and JavaScript are minified properly
 const TerserPlugin = require("terser-webpack-plugin");
-// it reduce the size of css by ignore the class with no use in html
-const { PurgeCSSPlugin } = require("purgecss-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "src/main.js"),
@@ -24,9 +22,6 @@ module.exports = {
     }),
     new MiniCssExtractPlugin({
       filename: "style.css",
-    }),
-    new PurgeCSSPlugin({
-      paths: [path.resolve(__dirname, "./src/index.html")],
     }),
   ],
   module: {
